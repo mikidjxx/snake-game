@@ -1,0 +1,46 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+#gameArea {
+    width: 400px;
+    height: 400px;
+    background-color: #111;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+}
+
+#infoArea {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.snake {
+    background-color: #0f0;
+    grid-column-start: var(--x);
+    grid-column-end: var(--x);
+    grid-row-start: var(--y);
+    grid-row-end: var(--y);
+}
+
+.apple {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: var(--x);
+    grid-column-end: var(--x);
+    grid-row-start: var(--y);
+    grid-row-end: var(--y);
+    font-size: 20px;
+}
